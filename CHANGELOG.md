@@ -1,3 +1,6 @@
+## 0.0.3
+* Fix flipped `MainAxisAlignment` when `stackingOrder` set to `StackingOrder.firstOnTop`.
+
 ## 0.0.2
 
 * Fix typo in pubspec.yaml
