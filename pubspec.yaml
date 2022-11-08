@@ -1,7 +1,7 @@
 name: signed_spacing_flex
-description: A Flex widget that can space it's children with positive or negative spacing.
+description: A Flex widget that can space its children with positive or negative spacing.
 
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/JakesMD/signed_spacing_flex
 repository: https://github.com/JakesMD/signed_spacing_flex
 
