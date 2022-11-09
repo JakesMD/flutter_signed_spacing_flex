@@ -245,6 +245,20 @@ class SignedSpacingFlex extends MultiChildRenderObjectWidget {
     return mainAxisAlignment;
   }
 
+  CrossAxisAlignment _getCrossAxisAlignment() {
+    if (stackingOrder == StackingOrder.firstOnTop) {
+      switch (mainAxisAlignment) {
+        case MainAxisAlignment.start:
+          return CrossAxisAlignment.end;
+        case MainAxisAlignment.end:
+          return CrossAxisAlignment.start;
+        default:
+          return crossAxisAlignment;
+      }
+    }
+    return crossAxisAlignment;
+  }
+
   @override
   RenderSignedSpacingFlex createRenderObject(BuildContext context) {
     return RenderSignedSpacingFlex(
@@ -252,7 +266,7 @@ class SignedSpacingFlex extends MultiChildRenderObjectWidget {
       spacing: spacing,
       mainAxisAlignment: _getMainAxisAlignment(),
       mainAxisSize: mainAxisSize,
-      crossAxisAlignment: crossAxisAlignment,
+      crossAxisAlignment: _getCrossAxisAlignment(),
       textDirection: getEffectiveTextDirection(context),
       verticalDirection: _getVerticalDirection(),
       textBaseline: textBaseline,
@@ -267,7 +281,7 @@ class SignedSpacingFlex extends MultiChildRenderObjectWidget {
       ..spacing = spacing
       ..mainAxisAlignment = _getMainAxisAlignment()
       ..mainAxisSize = mainAxisSize
-      ..crossAxisAlignment = crossAxisAlignment
+      ..crossAxisAlignment = _getCrossAxisAlignment()
       ..textDirection = getEffectiveTextDirection(context)
       ..verticalDirection = _getVerticalDirection()
       ..textBaseline = textBaseline
