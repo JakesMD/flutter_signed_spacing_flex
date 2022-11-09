@@ -247,10 +247,10 @@ class SignedSpacingFlex extends MultiChildRenderObjectWidget {
 
   CrossAxisAlignment _getCrossAxisAlignment() {
     if (stackingOrder == StackingOrder.firstOnTop) {
-      switch (mainAxisAlignment) {
-        case MainAxisAlignment.start:
+      switch (crossAxisAlignment) {
+        case CrossAxisAlignment.start:
           return CrossAxisAlignment.end;
-        case MainAxisAlignment.end:
+        case CrossAxisAlignment.end:
           return CrossAxisAlignment.start;
         default:
           return crossAxisAlignment;

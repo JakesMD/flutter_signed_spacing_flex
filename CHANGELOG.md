@@ -1,3 +1,6 @@
+## 0.0.5
+* Fix `CrossAxisAlignment` not working.
+
 ## 0.0.4
 * Fix flipped `CrossAxisAlignment` when `stackingOrder` set to `StackingOrder.firstOnTop`.
 

@@ -42,12 +42,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: SignedSpacingColumn(
                   spacing: _spacing.toDouble(),
                   stackingOrder: _stackingOrder,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Material(
                       elevation: 8,
                       color: Colors.red,
                       child: SizedBox(
                         height: 100,
+                        width: 100,
                         child: Center(child: Text("I'm fixed")),
                       ),
                     ),
