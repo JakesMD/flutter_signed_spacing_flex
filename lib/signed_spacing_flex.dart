@@ -76,9 +76,14 @@ class SignedSpacingFlex extends MultiChildRenderObjectWidget {
     this.textBaseline, // NO DEFAULT: we don't know what the text's baseline should be
     this.clipBehavior = Clip.none,
     List<Widget> children = const [],
-  })  : assert(crossAxisAlignment != CrossAxisAlignment.baseline || textBaseline != null,
+  })  : assert(
+            crossAxisAlignment != CrossAxisAlignment.baseline ||
+                textBaseline != null,
             'textBaseline is required if you specify the crossAxisAlignment with CrossAxisAlignment.baseline'),
-        super(children: stackingOrder == StackingOrder.firstOnTop ? children.reversed.toList() : children);
+        super(
+            children: stackingOrder == StackingOrder.firstOnTop
+                ? children.reversed.toList()
+                : children);
 
   /// The direction to use as the main axis.
   ///
@@ -186,7 +191,8 @@ class SignedSpacingFlex extends MultiChildRenderObjectWidget {
       case Axis.horizontal:
         return true; // because it affects the layout order.
       case Axis.vertical:
-        return crossAxisAlignment == CrossAxisAlignment.start || crossAxisAlignment == CrossAxisAlignment.end;
+        return crossAxisAlignment == CrossAxisAlignment.start ||
+            crossAxisAlignment == CrossAxisAlignment.end;
     }
   }
 
@@ -207,7 +213,8 @@ class SignedSpacingFlex extends MultiChildRenderObjectWidget {
   /// the logic for providing a text direction only when it is necessary.
   @protected
   TextDirection? getEffectiveTextDirection(BuildContext context) {
-    final newTextDirection = textDirection ?? (_needTextDirection ? Directionality.maybeOf(context) : null);
+    final newTextDirection = textDirection ??
+        (_needTextDirection ? Directionality.maybeOf(context) : null);
     if (newTextDirection != null && stackingOrder == StackingOrder.firstOnTop) {
       switch (newTextDirection) {
         case TextDirection.ltr:
@@ -275,7 +282,8 @@ class SignedSpacingFlex extends MultiChildRenderObjectWidget {
   }
 
   @override
-  void updateRenderObject(BuildContext context, covariant RenderSignedSpacingFlex renderObject) {
+  void updateRenderObject(
+      BuildContext context, covariant RenderSignedSpacingFlex renderObject) {
     renderObject
       ..direction = direction
       ..spacing = spacing
@@ -294,12 +302,19 @@ class SignedSpacingFlex extends MultiChildRenderObjectWidget {
     properties.add(EnumProperty<Axis>('direction', direction));
     properties.add(EnumProperty<double>('spacing', spacing));
     properties.add(EnumProperty<StackingOrder>('stackingOrder', stackingOrder));
-    properties.add(EnumProperty<MainAxisAlignment>('mainAxisAlignment', mainAxisAlignment));
-    properties.add(EnumProperty<MainAxisSize>('mainAxisSize', mainAxisSize, defaultValue: MainAxisSize.max));
-    properties.add(EnumProperty<CrossAxisAlignment>('crossAxisAlignment', crossAxisAlignment));
-    properties.add(EnumProperty<TextDirection>('textDirection', textDirection, defaultValue: null));
-    properties.add(EnumProperty<VerticalDirection>('verticalDirection', verticalDirection, defaultValue: VerticalDirection.down));
-    properties.add(EnumProperty<TextBaseline>('textBaseline', textBaseline, defaultValue: null));
+    properties.add(EnumProperty<MainAxisAlignment>(
+        'mainAxisAlignment', mainAxisAlignment));
+    properties.add(EnumProperty<MainAxisSize>('mainAxisSize', mainAxisSize,
+        defaultValue: MainAxisSize.max));
+    properties.add(EnumProperty<CrossAxisAlignment>(
+        'crossAxisAlignment', crossAxisAlignment));
+    properties.add(EnumProperty<TextDirection>('textDirection', textDirection,
+        defaultValue: null));
+    properties.add(EnumProperty<VerticalDirection>(
+        'verticalDirection', verticalDirection,
+        defaultValue: VerticalDirection.down));
+    properties.add(EnumProperty<TextBaseline>('textBaseline', textBaseline,
+        defaultValue: null));
   }
 }
 

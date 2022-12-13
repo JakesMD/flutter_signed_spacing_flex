@@ -1,3 +1,6 @@
+## 1.0.0
+* First stable release.
+
 ## 0.0.5
 * Fix `CrossAxisAlignment` not working.
 
