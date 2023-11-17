@@ -1,3 +1,6 @@
+## 1.1.0
+* Fix spacing DiagnosticsProperty type
+
 ## 1.0.0
 * First stable release.
 

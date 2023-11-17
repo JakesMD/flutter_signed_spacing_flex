@@ -23,7 +23,7 @@ import 'package:signed_spacing_flex/signed_spacing_flex.dart';
 
 ## Usage
 
-Checkout Flutter's guides to the [Flex](https://api.flutter.dev/flutter/widgets/Flex-class.html), [Column](https://api.flutter.dev/flutter/widgets/Column-class.html) and [Row](https://api.flutter.dev/flutter/widgets/Row-class.html) widgets. This package basically same just with some added features.
+Checkout Flutter's guides to the [Flex](https://api.flutter.dev/flutter/widgets/Flex-class.html), [Column](https://api.flutter.dev/flutter/widgets/Column-class.html) and [Row](https://api.flutter.dev/flutter/widgets/Row-class.html) widgets. This package is basically same just with some added features.
 
 1. Replace `Flex`, `Column` or `Row` with `SignedSpacingFlex`, `SignedSpacingColumn` or `SignedSpacingRow`.
 ``` dart
