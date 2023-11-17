@@ -1031,7 +1031,7 @@ class RenderSignedSpacingFlex extends RenderBox
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties.add(EnumProperty<Axis>('direction', direction));
-    properties.add(EnumProperty<double>('spacing', spacing));
+    properties.add(DoubleProperty('spacing', spacing));
     properties.add(EnumProperty<MainAxisAlignment>(
         'mainAxisAlignment', mainAxisAlignment));
     properties.add(EnumProperty<MainAxisSize>('mainAxisSize', mainAxisSize));
